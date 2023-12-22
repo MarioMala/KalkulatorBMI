@@ -1,0 +1,134 @@
+/** @format */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
+
+#root {
+	width: 80%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(194deg, rgba(255, 255, 255, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 80%);
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title {
+	color: #eee;
+	font-size: 3rem;
+	margin: 2rem;
+}
+
+.form {
+	width: 60%;
+	min-height: 15vh;
+}
+
+.weight,
+.growth {
+	display: flex;
+	align-items: center;
+	min-height: 3rem;
+	margin-bottom: 1rem;
+	justify-content: space-between;
+}
+
+#weight,
+#growth {
+	min-height: 3rem;
+	min-width: 60%;
+	font-size: 1.2rem;
+	padding: 1rem;
+	color: #090979;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	outline: none;
+	border: none;
+}
+
+#weight:focus,
+#growth:focus {
+	border: 3px solid #090979;
+}
+
+.weight label,
+.growth label {
+	font-size: 1.2rem;
+	padding-left: 0.5rem;
+	color: #fff;
+}
+
+.btn-box {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.calculate-btn {
+	width: 43%;
+	padding: 1.2rem;
+	font-size: 1.6rem;
+	border-radius: 0.5rem;
+	border: none;
+	color: #090979;
+	cursor: pointer;
+	transition: background-color 0.3s ease-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.calculate-btn:hover {
+	background-color: #090979;
+	color: #fff;
+	transform: scale(0.9);
+	font-weight: bold;
+	border: 2px solid #fff;
+}
+
+.result-box {
+	width: 100%;
+	min-height: 3vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.result-box .result {
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+.result.warning {
+	color: #ffa500;
+	font-weight: bold;
+}
+.result.danger {
+	color: red;
+	font-weight: bold;
+	animation: blink 1s infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+		font-size: 1rem;
+	}
+
+	100% {
+		opacity: 1;
+		font-size: 1.4rem;
+	}
+}
